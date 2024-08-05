@@ -13,6 +13,36 @@ async function getText(file, cell) {
 }
 
 
+function generateTextToSongTable(tableId, n_samples) {
+  let table = document.getElementById(tableId);
+  const prefix = 'audio_files/' + tableId.replaceAll('_', '/');
+
+  // Create table head;
+  let thead = table.createTHead();
+  let head_row = thead.insertRow();
+  let cell = head_row.insertCell(0);
+  cell.innerHTML = 'melody  prompt &#8594 text prompt &#8595';
+  for (let i = 0; i < n_samples; i++) {
+    let cell = head_row.insertCell(i + 1);
+    
+    cell.innerHTML = createAudioHTML(
+	    prefix + '/prompt/prompt_' + i.toString() +'.wav', cell);
+    cell.style.textAlign = "center";
+  }
+
+  for (let i = 0; i < n_samples; i++) {
+    let row = table.insertRow(i + 1);
+    let cell = row.insertCell(0);
+    getText(prefix + '/lyric/lyric_' + i.toString()+'.txt', cell);
+
+    for (let j = 0; j < n_samples; j++) {
+      let cell = row.insertCell(j + 1);
+      let cond_file = prefix + '/songeditor_pmt' + j.toString() + '_lrc' + i.toString() + '.flac';
+      cell.innerHTML = createAudioHTML(cond_file, cell);
+    }
+  }
+}
+
 const N_time_sample = 7
 function generateTimeEditSection(page) {
   let table = document.getElementById('time-edit');
@@ -27,7 +57,8 @@ function generateTimeEditSection(page) {
     row.style.height = '80px';
     if (i < N_time_sample) {
       let cell = row.insertCell(0);
-      cell.innerHTML = 'time-edit-' + i.toString();
+      getText(prefix + '/lyric/lyric_' + i.toString() + '.txt', cell);
+      // cell.innerHTML = 'time-edit-' + i.toString();
 
       cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(prefix + 's' + i.toString() + '.flac');
@@ -55,7 +86,7 @@ function generateTrackEditSection(page) {
     row.style.height = '80px';
     if (i < N_time_sample) {
       let cell = row.insertCell(0);
-      cell.innerHTML = 'track-edit-' + i.toString();
+      getText(prefix + 'lyric/lyric_' + i.toString() + '.txt', cell);
 
       cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(prefix + 'gt/s' + i.toString() + '.flac');
@@ -247,20 +278,8 @@ function generateTrackEditSection(page) {
 generateTimeEditSection(1);
 generateTrackEditSection(1);
 
-// generate10sTable('accordion'  , accordion  , 1);
-// generate10sTable('epochs'     , epochs	   , 1);
-// generate10sTable('experience' , experience , 1);
-// generate10sTable('genres'     , genres	   , 1);
-// generate10sTable('places'     , places	   , 1);
-// generate10sTable('instruments', instruments, 1);
-
-// generatePaintingsTable('painting-generation', paintingsFilenames, 1);
-// generateMelodyConditioningTable('melody-conditioning-generation', melodies_dirs, melodies_text_prompts);
-// generateStoryModeTable('storymode-generation', story_mode, 1);
-// longGenTable('longgen', longgen, 1);
-// generateDiversityTable('diversity-checks-txt', diversity_checks, 'same-text', 1);
-// generateDiversityTable('diversity-checks-semantic', diversity_checks, 'same-text-mlm', 1);
-// generateRichTable('rich-captions', rich_captions, 1);
+generateTextToSongTable('generation_zh',3)
+generateTextToSongTable('generation_en',3)
 
 
 
