@@ -1,0 +1,4 @@
+<font color='red'>[intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [verse] 月光洒落你窗台.星辰闪烁多美好.千年前的誓言埋.灵魂深处不忘掉.风吹过古老城墙.可有昔日的歌谣.凝望时光的长廊.心情依旧如初见, [inst], [inst], [inst], [inst], [inst], [inst], 
+<font color='blue'>[inst], [chorus] 你可听见我呼唤.千年岁月的期盼.心与心未曾变淡.等待着你回到我身边, [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], 
+<font color='red'>[inst], [inst], [verse] 蝴蝶纷飞穿花间.似在诉说旧时光.任时光如何消磨.爱意依然未离散. 青石板上足迹残.走过多少个春秋.眼眸深处的炽热.依旧为你燃烧着, [inst], [inst], [inst], [inst], [inst], [inst], [inst],
+<font color='blue'>[inst], [chorus] 你可听见我呼唤.千年岁月的期盼.心与心未曾变淡.等待着你回到我身边, [outro], [outro], [outro], [outro],[outro], [outro], [outro], [outro],[outro], [outro], [outro], [outro],

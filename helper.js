@@ -141,18 +141,16 @@ function generateTrackEditSection(page) {
 // }
 
 
-const story_mode_pattern = "<div><span>Prompt 1: </span> <span>Prompt 2: </span> </div> \
-          <span>Gen: </span> \
-          <div class=\"code_block\"></div>"
+
 function generateStoryModeTable(tableId, n_samples) {
   let story_block = document.getElementById(tableId);
   for (let i = 0; i < n_samples; i++) {
     var new_block = document.createElement("div");
     var new_prompts = document.createElement("div")
-    new_prompts.innerHTML += "<span>Prompt 1: " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/f.flac") + "</span>" + 
-                            "<span>Prompt 2: " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/m.flac") + "</span>"
+    new_prompts.innerHTML += "<span style=\"color: red\">Prompt 1: " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/f.flac") + "</span>" + 
+                            "<span style=\"color: blue\">Prompt 2: " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/m.flac") + "</span>"
     new_block.appendChild(new_prompts)
-    new_block.innerHTML += "<span>Gen: " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/gen.flac") + "</span>" 
+    new_block.innerHTML += "<span>Gen: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + createAudioHTML("audio_files/story_mode/" + i.toString() +"/gen.flac") + "</span>" 
     new_block.innerHTML += "<div class=\"code_block\"></div>"
     getText('audio_files/story_mode/' + i.toString() + '/lyrics.txt', new_block.lastElementChild);
     story_block.appendChild(new_block)
@@ -278,7 +276,7 @@ generateTrackEditSection(1);
 
 generateTextToSongTable('generation_zh',3)
 generateTextToSongTable('generation_en',3)
-generateStoryModeTable('story-mode', 1)
+generateStoryModeTable('story-mode', 3)
 
 
 $(document).ready(function() {

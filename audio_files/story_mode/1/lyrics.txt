@@ -1,0 +1,4 @@
+<font color='blue'>[intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [intro], [verse] 你走的那天.雨也哭个不停.心里空空的.无处可逃避.夜里独自漫步.心碎只剩孤独.对白早已模糊.回忆渐渐模糊. 街灯照亮街铺.我们的梦已成过去.拥抱变成了虚无.未来再也见不到你, [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst],
+<font color='red'>[chorus] 寂寞的夜.听见风的哭泣.我的爱.随着你悄然远离.寂寞的夜.泪水划过记忆.再也不见.再也无法继续, [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst], [inst],
+<font color='blue'>[inst], [inst], [inst], [inst], [inst], [verse] 回忆在脑海.像潮水一般涌现.每一个瞬间.都刺痛我心田.时间慢慢流逝.伤痛深藏心底.眼前人群熙攘.心却空如夜空, [inst], [inst], [inst], [inst], [inst], [inst],
+<font color='red'>[inst], [bridge] 曾经许下的诺言.如今变成了心酸.你走后不再温暖.寂寞夜夜伴随, [chorus] 寂寞的夜.听见风的哭泣.我的爱.随着你悄然远离.寂寞的夜.泪水划过记忆.再也不见.再也无法继续, [outro], [outro], [outro], [outro],
